@@ -1,5 +1,5 @@
 // global.js
-console.log('IT’S ALIVE!');
+import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 // 선택자 $$ 함수 (배열 반환)
 function $$(selector, context = document) {
@@ -188,6 +188,7 @@ export async function fetchGitHubData(samsooseo) {
   // GitHub 사용자 정보 가져오기
   const githubData = await fetchJSON('https://api.github.com/users/SAMSOOSEO');
   console.log(githubData);
+
 
   // HTML container 선택
   const profileStats = document.querySelector('#profile-stats');
