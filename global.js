@@ -1,4 +1,4 @@
-
+import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 console.log('IT’S ALIVE!');
 
 // 선택자 $$ 함수   (배열 반환)
@@ -112,7 +112,7 @@ export async function fetchJSON(url) {
 
 // 프로젝트 데이터를 가져와서 자동 렌더링하는 함수
 export async function initProjects() {
-  const projects = await fetchJSON('../lib/projects.json');
+  const projects = await fetchJSON(`${BASE_PATH}lib/projects.json`);
   const container = document.querySelector('.projects');
   container.innerHTML = '';
   projects.forEach(project => {
@@ -180,7 +180,7 @@ export async function fetchGitHubData(samsooseo) {
 (async function() {
   // 프로젝트 렌더링
   const projectsContainer = document.querySelector('.projects');
-  const projects = await fetchJSON('../lib/projects.json');
+  const projects = await fetchJSON(`${BASE_PATH}lib/projects.json`);
   const latestProjects = projects.slice(0, 4);
   renderProjects(latestProjects, projectsContainer, 'h3');
   
