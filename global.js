@@ -23,7 +23,7 @@ document.body.prepend(nav);
 const BASE_PATH =
   location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? '/'             // 로컬 서버
-    : '/lab-4/';      // GitHub Pages repo 이름
+    : '/lab-5/';      // GitHub Pages repo 이름
 
 // 페이지 링크 반복 생성
 for (let p of pages) {
